@@ -13,7 +13,7 @@ const Header = () => {
       <div className="w-1/5">
         <Logo />
       </div>
-      <div className="flex gap-20">
+      <div className="flex gap-80">
         <SearchBar />
         <div className="flex text-center gap-6">
           <IconButton text="Create" icon={IoAddCircleSharp} />

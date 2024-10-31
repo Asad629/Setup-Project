@@ -18,7 +18,7 @@ const DefaultLayout = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid-area-main bg-white flex flex-col">
+          <div className="grid-area-main bg-white">
             <Outlet />
           </div>
         </div>

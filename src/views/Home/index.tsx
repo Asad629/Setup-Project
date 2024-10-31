@@ -1,4 +1,6 @@
 import { DataTableDemo } from "@/components/custom/DataTable";
+import { ChartComponent } from "@/components/custom/LineChart";
+import { RadialChart } from "@/components/custom/RadialChart";
 import React from "react";
 
 const Home = () => {
@@ -8,6 +10,10 @@ const Home = () => {
       <p className="text-base font-normal text-zinc-500">
         Here is the information about all your events
       </p>
+      <div className="flex items-center gap-4">
+        <ChartComponent />
+        <RadialChart />
+      </div>
       <DataTableDemo />
     </div>
   );
