@@ -5,30 +5,24 @@ import { Outlet } from "react-router-dom";
 
 const DefaultLayout = () => {
   return (
-    // <SidebarProvider>
-      <div className="w-full min-h-screen grid grid-rows-[auto,1fr,auto] grid-cols-[auto,1fr] grid-areas-layout h-full mt-12">
-        {/* Header */}
-        <div className="grid-area-header col-span-2">
-          <Header />
-        </div>
-        <div className="flex w-full">
-          {/* Sidebar */}
-          <div className="grid-area-sidebar border-r-2">
-            <AppSidebar />
-          </div>
-
-          {/* Main Content */}
-          <div className="grid-area-main bg-white">
-            <Outlet />
-          </div>
+    <div className="w-full min-h-screen grid grid-rows-[auto,1fr,auto] grid-cols-[auto,1fr] grid-areas-layout h-full mt-12">
+      <div className="grid-area-header col-span-2 sticky top-0 bg-white z-10">
+        <Header />
+      </div>
+      <div className="flex flex-row">
+        <div className="grid-area-sidebar border-r-2 md:block lg:block sm:hidden">
+          <AppSidebar />
         </div>
 
-        {/* Footer */}
-        <div className="grid-area-footer col-span-2">
-          <Footer />
+        <div className="grid-area-main bg-white  ">
+          <Outlet />
         </div>
       </div>
-    // </SidebarProvider>
+
+      <div className="grid-area-footer col-span-2">
+        <Footer />
+      </div>
+    </div>
   );
 };
 

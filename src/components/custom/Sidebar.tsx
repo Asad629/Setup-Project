@@ -1,45 +1,10 @@
-import { Inbox, Search, Settings } from "lucide-react";
-import { paths } from "../../routes/path";
-import { BsBarChart } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { FaRegUser } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { items } from "@/constant";
 
-// Menu items.
-const items = [
-  {
-    title: "Overview",
-    url: paths.root,
-    icon: BsBarChart,
-  },
-  {
-    title: "Product",
-    url: paths.product,
-    icon: Inbox,
-  },
-  {
-    title: "Order",
-    url: paths.order,
-    icon: FaRegUser,
-  },
-  {
-    title: "Checkout",
-    url: paths.checkout,
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: paths.sitting,
-    icon: Settings,
-  },
-];
 
 export function AppSidebar() {
   const [activeItem, setActiveItem] = useState(items[0]?.title || null);
-
-  useEffect(() => {
-    setActiveItem(items[0]?.title);
-  }, [items]);
 
   return (
     <div className="py-8 pl-12">

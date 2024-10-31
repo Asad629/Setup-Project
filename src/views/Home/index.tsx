@@ -10,7 +10,7 @@ const Home = () => {
       <p className="text-base font-normal text-zinc-500">
         Here is the information about all your events
       </p>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mt-4 lg:flex-row md:flex-col sm:flex-col">
         <ChartComponent />
         <RadialChart />
       </div>

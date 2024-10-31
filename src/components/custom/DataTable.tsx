@@ -32,48 +32,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Table_Type } from "@/type";
+import { TABLE_DATA } from "@/constant";
 
-const data: Payment[] = [
-  {
-    no: 1,
-    id: "m5gr84i9",
-    date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
-    location: "Ramania Cluj",
-    amount: 316,
-    status: "Active",
-  },
-  {
-    no: 2,
-    id: "5kma53ae",
-    amount: 874,
-    date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
-    location: "Ramania Cluj",
-    status: "On Delivery",
-  },
-  {
-    no: 3,
-    id: "bhqecj4p",
-    amount: 721,
-    date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
-    location: "Ramania Cluj",
-    status: "Finisat",
-  },
-];
 
-export type Payment = {
-  no: number;
-  id: string;
-  amount: number;
-  status: "Active" | "Finisat" | "On Delivery";
-  date: string;
-  name: string;
-  location: string;
-};
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Table_Type>[] = [
   {
     accessorKey: "no",
     header: () => <div className=" text-xs font-medium">No</div>,
@@ -170,7 +133,7 @@ export function DataTableDemo() {
   const [rowSelection, setRowSelection] = React.useState({});
 
   const table = useReactTable({
-    data,
+    data: TABLE_DATA,
     columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,

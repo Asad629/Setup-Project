@@ -11,7 +11,7 @@ function SearchBar() {
           placeholder="Search..."
           className="pl-10 pr-20 py-1 w-full outline-none placeholder-gray-500 rounded-lg"
         />
-        <button className="absolute right-1 bg-blue-500 text-white px-4 py-[5px]  rounded-tr-md rounded-br-md hover:bg-blue-600 -mr-1">
+        <button className="absolute right-1 bg-blue-500 text-white px-4 py-1  rounded-tr-md rounded-br-md hover:bg-blue-600 -mr-1">
           Search
         </button>
       </div>
