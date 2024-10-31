@@ -1,6 +1,15 @@
+import { ChartConfig } from "@/components/ui/chart";
 import { paths } from "@/routes/path";
 import { Table_Type } from "@/type";
-import { Inbox, Search, Settings } from "lucide-react";
+import {
+  CircleCheck,
+  Heart,
+  icons,
+  Inbox,
+  Search,
+  Settings,
+  UsersRound,
+} from "lucide-react";
 import { BsBarChart } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 
@@ -65,5 +74,78 @@ export const items = [
     title: "Settings",
     url: paths.sitting,
     icon: Settings,
+  },
+];
+
+export const chartConfig = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
+    color: "hsl(var(--chart-1))",
+  },
+  safari: {
+    label: "Safari",
+    color: "hsl(var(--chart-2))",
+  },
+  firefox: {
+    label: "Firefox",
+    color: "hsl(var(--chart-3))",
+  },
+  edge: {
+    label: "Edge",
+    color: "hsl(var(--chart-4))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+} satisfies ChartConfig;
+
+export const LineChartData = [
+  { month: "January", desktop: 186, mobile: 180 },
+  { month: "February", desktop: 305, mobile: 260 },
+  { month: "March", desktop: 237, mobile: 220 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 180 },
+  { month: "June", desktop: 114, mobile: 140 },
+];
+
+export const LineChartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "hsl(var(--chart-1))",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "hsl(var(--chart-2))",
+  },
+} satisfies ChartConfig;
+
+export const CardData = [
+  {
+    amount: "9,930",
+    text: "Ventail total",
+    value: "10.2",
+    icon: { Heart },
+  },
+  {
+    amount: "$ 52.3",
+    text: "Total users",
+    value: "12.4",
+    icon: { UsersRound },
+  },
+  {
+    amount: "7,4534",
+    text: "Bilete vandiate",
+    value: "55.5",
+    icon: { Inbox },
+  },
+  {
+    amount: "12,344",
+    text: "Facourite",
+    value: "16.5",
+    icon: {CircleCheck},
   },
 ];

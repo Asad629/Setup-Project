@@ -11,45 +11,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import DotText from "../shared/Dottext";
-import { chartData } from "@/constant";
+import { chartConfig, chartData } from "@/constant";
 
 
-
-const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig;
 
 export function RadialChart() {
   return (
-    <Card className="flex flex-col md:w-full lg:w-auto">
+    <Card className="flex flex-col md:w-full lg:w-auto sm:w-full xs:w-full">
       <CardHeader className="items-center pb-0 flex flex-row my-1 justify-between">
         <CardTitle className="font-medium text-xl">Earnings</CardTitle>
         <Ellipsis />

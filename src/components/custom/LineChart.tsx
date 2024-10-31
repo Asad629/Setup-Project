@@ -8,34 +8,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { Button } from "../ui/button";
 import DotText from "../shared/Dottext";
-export const description = "A multiple line chart";
+import { LineChartConfig, LineChartData } from "@/constant";
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 180 },
-  { month: "February", desktop: 305, mobile: 260 },
-  { month: "March", desktop: 237, mobile: 220 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 180 },
-  { month: "June", desktop: 114, mobile: 140 },
-];
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig;
 
 export function ChartComponent() {
   return (
@@ -57,10 +37,10 @@ export function ChartComponent() {
         </div>
       </CardHeader>
       <CardContent className="w-full h-full flex-1">
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={LineChartConfig} style={{height: "80%" , width: "100%"}}>
           <LineChart
             accessibilityLayer
-            data={chartData}
+            data={LineChartData}
             margin={{
               left: 12,
               right: 12,

@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const Header = () => {
   return (
     <>
-      <div className="w-11/12 mx-auto items-center justify-between mb-4 md:hidden lg:hidden sm:flex">
+      <div className="w-11/12 mx-auto items-center justify-between mb-4 md:hidden lg:hidden sm:flex xs:flex">
         <Menu />
         <SearchBar />
         <Avatar>
@@ -18,11 +18,11 @@ const Header = () => {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
-      <div className="w-full flex text-center border-b-2 py-4 sm:hidden md:flex lg:flex">
+      <div className="w-full flex text-center border-b-2 py-4 sm:hidden md:flex lg:flex xs:hidden">
         <div className="w-1/5">
           <Logo />
         </div>
-        <div className="flex gap-80">
+        <div className="flex gap-72">
           <SearchBar />
           <div className="flex text-center gap-6">
             <IconButton text="Create" icon={IoAddCircleSharp} />

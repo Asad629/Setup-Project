@@ -9,8 +9,8 @@ const DefaultLayout = () => {
       <div className="grid-area-header col-span-2 sticky top-0 bg-white z-10">
         <Header />
       </div>
-      <div className="flex flex-row">
-        <div className="grid-area-sidebar border-r-2 md:block lg:block sm:hidden">
+      <div className="grid grid-cols-[1fr_4fr]">
+        <div className="grid-area-sidebar border-r-2 md:block lg:block sm:hidden xs:hidden">
           <AppSidebar />
         </div>
 
