@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "./common/Logo";
-import SearchBar from "./common/SearchBar";
-import IconButton from "./common/IconButton";
+import Logo from "../shared/Logo";
+import SearchBar from "../shared/SearchBar";
+import IconButton from "../shared/IconButton";
 import { IoAddCircleSharp } from "react-icons/io5";
 import { GiHeavyTimer } from "react-icons/gi";
 import { Bell, Heart } from "lucide-react";

@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import { AppSidebar } from "@/components/Sidebar";
+import Footer from "@/components/custom/Footer";
+import Header from "@/components/custom/Header";
+import { AppSidebar } from "@/components/custom/Sidebar";
 import { Outlet } from "react-router-dom";
 
 const DefaultLayout = () => {

@@ -1,5 +1,5 @@
 import { Inbox, Search, Settings } from "lucide-react";
-import { paths } from "./../routes/path";
+import { paths } from "../../routes/path";
 import { BsBarChart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa6";
