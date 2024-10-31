@@ -16,17 +16,14 @@ import {
 import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
 import {
   Table,
   TableBody,
@@ -77,45 +74,22 @@ export type Payment = {
 };
 
 export const columns: ColumnDef<Payment>[] = [
-  // {
-  //   id: "select",
-  //   header: ({ table }) => (
-  //     <Checkbox
-  //       checked={
-  //         table.getIsAllPageRowsSelected() ||
-  //         (table.getIsSomePageRowsSelected() && "indeterminate")
-  //       }
-  //       onCheckedChange={(value: any) =>
-  //         table.toggleAllPageRowsSelected(!!value)
-  //       }
-  //       aria-label="Select all"
-  //     />
-  //   ),
-  //   cell: ({ row }) => (
-  //     <Checkbox
-  //       checked={row.getIsSelected()}
-  //       onCheckedChange={(value: any) => row.toggleSelected(!!value)}
-  //       aria-label="Select row"
-  //     />
-  //   ),
-  //   enableSorting: false,
-  //   enableHiding: false,
-  // },
   {
     accessorKey: "no",
-    header: "No",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("no")}</div>,
+    header: () => <div className=" text-xs font-medium">No</div>,
+    cell: ({ row }) => <div className="capitalize font-normal text-xs">{row.getValue("no")}</div>,
   },
   {
     accessorKey: "id",
-    header: "ID",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
+    header: () => <div className="text-xs font-medium">ID</div>,
+    cell: ({ row }) => <div className="capitalize font-normal text-xs">{row.getValue("id")}</div>,
   },
   {
     accessorKey: "date",
     header: ({ column }) => {
       return (
         <Button
+          className="text-xs font-medium"
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
@@ -124,40 +98,40 @@ export const columns: ColumnDef<Payment>[] = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="Uppercase">{row.getValue("date")}</div>,
+    cell: ({ row }) => <div className="Uppercase font-normal text-xs">{row.getValue("date")}</div>,
   },
   {
     accessorKey: "name",
-    header: () => <div className="text-right">Event Name</div>,
+    header: () => <div className=" text-xs font-medium">Event Name</div>,
     cell: ({ row }) => {
-      return <div className="">{row.getValue("name")}</div>;
+      return <div className="font-normal text-xs">{row.getValue("name")}</div>;
     },
   },
   {
     accessorKey: "location",
-    header: () => <div className="text-right">Location</div>,
+    header: () => <div className=" text-xs font-medium">Location</div>,
     cell: ({ row }) => {
-      return <div className="">{row.getValue("location")}</div>;
+      return <div className="font-normal text-xs">{row.getValue("location")}</div>;
     },
   },
   {
     accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    header: () => <div className=" text-xs font-medium">Amount</div>,
     cell: ({ row }) => {
-      return <div className="">{row.getValue("amount")}</div>;
+      return <div className="font-normal text-xs">{row.getValue("amount")}</div>;
     },
   },
   {
     accessorKey: "status",
-    header: () => <div className="text-right">Status Event</div>,
+    header: () => <div className=" text-xs font-medium">Status Event</div>,
     cell: ({ row }) => {
-      return <div className="">{row.getValue("status")}</div>;
+      return <div className="font-normal text-xs">{row.getValue("status")}</div>;
     },
   },
   {
     id: "actions",
     enableHiding: false,
-    header: () => <div className="text-right">Action</div>,
+    header: () => <div className="text-right text-xs font-medium">Action</div>,
     cell: ({ row }) => {
       const payment = row.original;
 
@@ -215,45 +189,18 @@ export function DataTableDemo() {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full border border-gray-200 rounded-md p-4 my-4">
       <div className="flex items-center py-4">
-        {/* <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
-        /> */}
-        <h1>Lista de Evenimate</h1>
+        <h1 className="font-medium text-xl">Lista de Evenimate</h1>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
               Monthly <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          {/* <DropdownMenuContent align="end">
-            {table
-              .getAllColumns()
-              .filter((column) => column.getCanHide())
-              .map((column) => {
-                return (
-                  <DropdownMenuCheckboxItem
-                    key={column.id}
-                    className="capitalize"
-                    checked={column.getIsVisible()}
-                    onCheckedChange={(value: any) =>
-                      column.toggleVisibility(!!value)
-                    }
-                  >
-                    {column.id}
-                  </DropdownMenuCheckboxItem>
-                );
-              })}
-          </DropdownMenuContent> */}
         </DropdownMenu>
       </div>
-      <div className="rounded-md border">
+      <div className=" border-b">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
