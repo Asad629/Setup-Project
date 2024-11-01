@@ -1,9 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "@/components/custom/Footer";
 import Header from "@/components/custom/Header";
 import { AppSidebar } from "@/components/custom/Sidebar";
+import { useEffect } from "react";
 
 const DefaultLayout = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="w-full min-h-screen grid grid-rows-[auto,1fr,auto] grid-cols-[auto,1fr] grid-areas-layout h-full mt-12">
       <div className="grid-area-header col-span-2 sticky top-0 bg-white z-10">
