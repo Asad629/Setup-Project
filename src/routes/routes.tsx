@@ -4,7 +4,7 @@ import Product from "@/views/product";
 import Order from "@/views/order";
 import Checkout from "@/views/checkout";
 import EventDetail from "@/views/event-detail";
-import DefaultLayout from "@/layouts/DefaultLayout";
+import DefaultLayout from "@/layouts/defaultLayout";
 import { createBrowserRouter } from "react-router-dom";
 import Setting from "@/views/setting";
 
