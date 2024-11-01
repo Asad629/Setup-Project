@@ -29,7 +29,7 @@ import { Link } from "react-router-dom";
 import { paths } from "@/routes/path";
 import { Button } from "@/components/ui/button";
 import { Table_Type } from "@/type/type";
-import { TABLE_DATA } from "@/constant/constant";
+import { TABLE_DATA } from "@/constants/constants";
 import { ArrowUpDown, ChevronDown } from "lucide-react";
 
 export const columns: ColumnDef<Table_Type>[] = [

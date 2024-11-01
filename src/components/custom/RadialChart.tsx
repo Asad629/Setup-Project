@@ -12,10 +12,10 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import DotText from "../shared/Dottext";
+import DotText from "@/components/shared/Dottext";
 import { Ellipsis } from "lucide-react";
 import { RadialBar, RadialBarChart } from "recharts";
-import { chartConfig, chartData } from "@/constant/constant";
+import { chartConfig, chartData } from "@/constants/constants";
 
 export function RadialChart() {
   return (

@@ -1,6 +1,6 @@
-import Logo from "../shared/Logo";
-import SearchBar from "../shared/SearchBar";
-import IconButton from "../shared/IconButton";
+import Logo from "@/components/shared/Logo";
+import SearchBar from "@/components/shared/SearchBar";
+import IconButton from "@/components/shared/IconButton";
 import { Heart, Menu, Plus } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CiBellOn } from "react-icons/ci";
@@ -8,7 +8,7 @@ import { AiOutlineProduct } from "react-icons/ai";
 
 const Header = () => {
   return (
-    <>
+    <div>
       <div className="w-11/12 mx-auto items-center justify-between mb-4 md:hidden lg:hidden sm:flex xs:flex">
         <Menu />
         <SearchBar />
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

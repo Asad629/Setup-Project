@@ -1,4 +1,3 @@
-import React from "react";
 import CardBar from "@/components/custom/CardBar";
 import { DataTableDemo } from "@/components/custom/DataTable";
 import { ChartComponent } from "@/components/custom/LineChart";

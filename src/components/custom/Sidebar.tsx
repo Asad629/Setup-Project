@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { items } from "@/constant/constant";
+import { items } from "@/constants/constants";
 
 export function AppSidebar() {
   const [activeItem, setActiveItem] = useState(items[0]?.title || null);

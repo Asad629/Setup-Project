@@ -1,4 +1,4 @@
-import IconButton from "../shared/IconButton";
+import IconButton from "@/components/shared/IconButton";
 import { CircleDot, MoveLeft } from "lucide-react";
 
 const LocationCard = () => {

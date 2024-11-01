@@ -1,13 +1,12 @@
 import { paths } from "./path";
 import Home from "@/views/Home";
-import AboutUs from "@/views/AboutUs";
 import Product from "@/views/Product";
 import Order from "@/views/Order";
 import Checkout from "@/views/Checkout";
-import Sitting from "@/views/Sitting";
 import EventDetail from "@/views/EventDetail";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { createBrowserRouter } from "react-router-dom";
+import Setting from "@/views/Setting";
 
 const routes = createBrowserRouter([
   {
@@ -17,10 +16,6 @@ const routes = createBrowserRouter([
       {
         path: paths.root,
         element: <Home />,
-      },
-      {
-        path: paths.about,
-        element: <AboutUs />,
       },
       {
         path: paths.product,
@@ -35,8 +30,8 @@ const routes = createBrowserRouter([
         element: <Checkout />,
       },
       {
-        path: paths.sitting,
-        element: <Sitting />,
+        path: paths.setting,
+        element: <Setting />,
       },
       {
         path: paths.event_detail,

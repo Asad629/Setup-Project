@@ -71,7 +71,7 @@ export const items = [
   },
   {
     title: "Settings",
-    url: paths.sitting,
+    url: paths.setting,
     icon: Settings,
   },
 ];
@@ -145,6 +145,6 @@ export const CardData = [
     amount: "12,344",
     text: "Facourite",
     value: "16.5",
-    icon: {CircleCheck},
+    icon: { CircleCheck },
   },
 ];

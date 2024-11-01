@@ -10,11 +10,11 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { Button } from "../ui/button";
-import DotText from "../shared/Dottext";
+import { Button } from "@/components/ui/button";
+import DotText from "@/components/shared/Dottext";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { LineChartConfig, LineChartData } from "@/constant/constant";
+import { LineChartConfig, LineChartData } from "@/constants/constants";
 
 export function ChartComponent() {
   return (

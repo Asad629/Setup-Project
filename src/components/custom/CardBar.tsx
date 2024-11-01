@@ -1,5 +1,5 @@
-import BannerCard from "../shared/BannerCard";
-import { CardData } from "@/constant/constant";
+import BannerCard from "@/components/shared/BannerCard";
+import { CardData } from "@/constants/constants";
 
 const CardBar = () => {
   return (
