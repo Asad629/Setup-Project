@@ -9,7 +9,7 @@ import {
 import { BsBarChart } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { paths } from "@/routes/path";
-import { Table_Type } from "@/type/type";
+import { Table_Type } from "@/types/types";
 import { ChartConfig } from "@/components/ui/chart";
 
 export const TABLE_DATA: Table_Type[] = [
