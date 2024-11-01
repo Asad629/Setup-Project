@@ -1,12 +1,12 @@
 import { paths } from "./path";
-import Home from "@/views/Home";
-import Product from "@/views/Product";
-import Order from "@/views/Order";
-import Checkout from "@/views/Checkout";
-import EventDetail from "@/views/EventDetail";
+import Home from "@/views/home";
+import Product from "@/views/product";
+import Order from "@/views/order";
+import Checkout from "@/views/checkout";
+import EventDetail from "@/views/event-detail";
 import DefaultLayout from "@/layouts/DefaultLayout";
 import { createBrowserRouter } from "react-router-dom";
-import Setting from "@/views/Setting";
+import Setting from "@/views/setting";
 
 const routes = createBrowserRouter([
   {
