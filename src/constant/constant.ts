@@ -1,10 +1,6 @@
-import { ChartConfig } from "@/components/ui/chart";
-import { paths } from "@/routes/path";
-import { Table_Type } from "@/type";
 import {
   CircleCheck,
   Heart,
-  icons,
   Inbox,
   Search,
   Settings,
@@ -12,13 +8,16 @@ import {
 } from "lucide-react";
 import { BsBarChart } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
+import { paths } from "@/routes/path";
+import { Table_Type } from "@/type/type";
+import { ChartConfig } from "@/components/ui/chart";
 
 export const TABLE_DATA: Table_Type[] = [
   {
     no: 1,
     id: "m5gr84i9",
     date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
+    name: "SATOSHI ",
     location: "Ramania Cluj",
     amount: 316,
     status: "Active",
@@ -28,7 +27,7 @@ export const TABLE_DATA: Table_Type[] = [
     id: "5kma53ae",
     amount: 874,
     date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
+    name: "Sport Cluj",
     location: "Ramania Cluj",
     status: "On Delivery",
   },
@@ -37,7 +36,7 @@ export const TABLE_DATA: Table_Type[] = [
     id: "bhqecj4p",
     amount: 721,
     date: "Dec 1, 2015",
-    name: "SATOSHI - Sport Cluj",
+    name: "Sport ",
     location: "Ramania Cluj",
     status: "Finisat",
   },

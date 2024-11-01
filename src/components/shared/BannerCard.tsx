@@ -1,6 +1,5 @@
-import { CardPropTypes } from "@/interface";
 import { UsersRound } from "lucide-react";
-import React from "react";
+import { CardPropTypes } from "@/interface/interface";
 
 
 const BannerCard = ({ amount, text, value }: CardPropTypes) => {

@@ -1,11 +1,10 @@
-import React from "react";
 import Logo from "../shared/Logo";
 import SearchBar from "../shared/SearchBar";
 import IconButton from "../shared/IconButton";
-import { IoAddCircleSharp } from "react-icons/io5";
-import { GiHeavyTimer } from "react-icons/gi";
-import { Bell, Heart, Menu } from "lucide-react";
+import { Heart, Menu, Plus } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CiBellOn } from "react-icons/ci";
+import { AiOutlineProduct } from "react-icons/ai";
 
 const Header = () => {
   return (
@@ -22,14 +21,13 @@ const Header = () => {
         <div className="w-1/5">
           <Logo />
         </div>
-        <div className="flex gap-72">
+        <div className="flex gap-80">
           <SearchBar />
           <div className="flex text-center gap-6">
-            <IconButton text="Create" icon={IoAddCircleSharp} />
-            <IconButton text="Discover" icon={GiHeavyTimer} />
+            <IconButton text="Create" icon={Plus} />
+            <IconButton text="Discover" icon={AiOutlineProduct} />
             <IconButton text="Favorites" icon={Heart} />
-
-            <Bell className="mt-2" />
+            <CiBellOn className="mt-2 text-blue-500 text-xl font-medium" />
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>CN</AvatarFallback>

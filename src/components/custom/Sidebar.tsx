@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import { items } from "@/constant";
-
+import { Link } from "react-router-dom";
+import { items } from "@/constant/constant";
 
 export function AppSidebar() {
   const [activeItem, setActiveItem] = useState(items[0]?.title || null);
@@ -21,7 +20,13 @@ export function AppSidebar() {
                 }`}
                 onClick={() => setActiveItem(item.title)}
               >
-                <item.icon  className={`w-5 ${activeItem === item.title ? "text-blue-500" : "text-gray-500"}`}  />
+                <item.icon
+                  className={`w-5 ${
+                    activeItem === item.title
+                      ? "text-blue-500"
+                      : "text-gray-500"
+                  }`}
+                />
                 <span>{item.title}</span>
               </Link>
             </div>

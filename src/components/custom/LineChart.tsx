@@ -1,12 +1,10 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
@@ -14,8 +12,9 @@ import {
 } from "@/components/ui/chart";
 import { Button } from "../ui/button";
 import DotText from "../shared/Dottext";
-import { LineChartConfig, LineChartData } from "@/constant";
-
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { LineChartConfig, LineChartData } from "@/constant/constant";
 
 export function ChartComponent() {
   return (
@@ -37,7 +36,10 @@ export function ChartComponent() {
         </div>
       </CardHeader>
       <CardContent className="w-full h-full flex-1">
-        <ChartContainer config={LineChartConfig} style={{height: "80%" , width: "100%"}}>
+        <ChartContainer
+          config={LineChartConfig}
+          style={{ height: "80%", width: "100%" }}
+        >
           <LineChart
             accessibilityLayer
             data={LineChartData}

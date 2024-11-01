@@ -5,4 +5,5 @@ export const paths = {
   order: "/order",
   checkout: "/checkout",
   sitting: "/sitting",
+  event_detail: "/event-detail",
 };

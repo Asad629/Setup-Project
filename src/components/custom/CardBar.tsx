@@ -1,6 +1,5 @@
-import React from "react";
 import BannerCard from "../shared/BannerCard";
-import { CardData } from "@/constant";
+import { CardData } from "@/constant/constant";
 
 const CardBar = () => {
   return (

@@ -1,8 +1,5 @@
 "use client";
 
-import { Ellipsis } from "lucide-react";
-import { RadialBar, RadialBarChart } from "recharts";
-
 import {
   Card,
   CardContent,
@@ -16,9 +13,9 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import DotText from "../shared/Dottext";
-import { chartConfig, chartData } from "@/constant";
-
-
+import { Ellipsis } from "lucide-react";
+import { RadialBar, RadialBarChart } from "recharts";
+import { chartConfig, chartData } from "@/constant/constant";
 
 export function RadialChart() {
   return (

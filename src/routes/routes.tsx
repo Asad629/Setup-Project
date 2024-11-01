@@ -1,12 +1,13 @@
-import { createBrowserRouter } from "react-router-dom";
 import { paths } from "./path";
-import DefaultLayout from "@/layouts/DefaultLayout";
 import Home from "@/views/Home";
 import AboutUs from "@/views/AboutUs";
 import Product from "@/views/Product";
 import Order from "@/views/Order";
 import Checkout from "@/views/Checkout";
 import Sitting from "@/views/Sitting";
+import EventDetail from "@/views/EventDetail";
+import DefaultLayout from "@/layouts/DefaultLayout";
+import { createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const routes = createBrowserRouter([
       {
         path: paths.sitting,
         element: <Sitting />,
+      },
+      {
+        path: paths.event_detail,
+        element: <EventDetail />,
       },
     ],
   },
